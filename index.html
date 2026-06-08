@@ -1411,56 +1411,117 @@ function toggleAcc(card) {
 <div class="divider"></div>
 
 <!-- PACKAGES -->
+<style>
+.pkg-new {
+  background: var(--dark2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+.pkg-new:hover { transform: translateY(-3px); }
+.pkg-border-strategic { border: 2px solid #FF4500; }
+.pkg-border-main      { border: 2px solid #e8a020; }
+.pkg-border-gold      { border: 2px solid #c8b400; }
+.pkg-border-silver    { border: 2px solid #9aa0a6; }
+.pkg-border-support   { border: 2px solid #6e8efb; }
+.pkg-new-title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  font-family: 'Thamaniah','Cairo',sans-serif !important;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.pkg-new ul { list-style: none; }
+.pkg-new ul li {
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-family: 'IBM Plex Sans Arabic','Cairo',sans-serif;
+}
+.pkg-new ul li:last-child { border: none; }
+.pkg-new ul li::before { content: '+'; color: #FF4500; font-weight: 700; flex-shrink: 0; font-size: 13px; }
+.pkg-top-badge {
+  position: absolute;
+  top: -1px; right: 50%;
+  transform: translateX(50%);
+  background: #FF4500;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 0 0 8px 8px;
+  font-family: 'Cairo',sans-serif;
+}
+</style>
 <section id="partners">
   <div class="section-label">أنواع الباقات</div>
   <h2 class="section-title">كن جزءاً من رحلة نجاحنا</h2>
   <p class="section-sub">نوفر منصة رياضية ومجتمعية تُمكّن الشريك من بناء علاقة حقيقية مع اللاعبين وأولياء الأمور والجمهور المستهدف</p>
 
   <div class="packages-grid">
-    <div class="pkg top">
-      <div class="pkg-star"><svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1" style="vertical-align:middle;margin-left:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> الأعلى</div>
-      <div class="pkg-title">الشريك الاستراتيجي</div>
+
+    <div class="pkg-new pkg-border-strategic">
+      <div class="pkg-top-badge">★ الأعلى</div>
+      <div class="pkg-new-title">الراعي الاستراتيجي</div>
       <ul>
         <li>حضور حصري وكامل</li>
         <li>حملات تسويقية مشتركة</li>
         <li>أولوية المشاريع المستقبلية</li>
-        <li>ظهور في جميع المواد</li>
+        <li>ظهور في جميع المواد الإعلامية</li>
         <li>شراكة طويلة الأمد</li>
+        <li>مبادرات خاصة مع الأكاديمية</li>
       </ul>
     </div>
-    <div class="pkg">
-      <div class="pkg-title">الراعي الرئيسي</div>
+
+    <div class="pkg-new" style="border:1px solid rgba(255,255,255,0.08);">
+      <div class="pkg-new-title">الراعي الرئيسي</div>
       <ul>
         <li>شعار في المواد الإعلامية</li>
         <li>محتوى رقمي مشترك</li>
-        <li>حضور الفعاليات</li>
-        <li>إشارة في الإعلانات</li>
+        <li>حضور الفعاليات والأنشطة</li>
+        <li>إشارة في الإعلانات والمنشورات</li>
+        <li>مزايا أخرى حسب الاتفاقية</li>
       </ul>
     </div>
-    <div class="pkg">
-      <div class="pkg-title">الراعي الذهبي</div>
+
+    <div class="pkg-new" style="border:1px solid rgba(255,255,255,0.08);">
+      <div class="pkg-new-title">الراعي الذهبي</div>
       <ul>
         <li>ظهور في المنصات الرقمية</li>
         <li>قائمة الرعاة الرسميين</li>
         <li>المشاركة في الحملات</li>
+        <li>مزايا أخرى حسب الاتفاقية</li>
       </ul>
     </div>
-    <div class="pkg">
-      <div class="pkg-title">الراعي الفضي</div>
+
+    <div class="pkg-new" style="border:1px solid rgba(255,255,255,0.08);">
+      <div class="pkg-new-title">الراعي الفضي</div>
       <ul>
         <li>شعار في مواد الرعاة</li>
-        <li>ظهور رقمي</li>
+        <li>ظهور رقمي عبر المنصات</li>
         <li>بعض الفعاليات</li>
+        <li>مزايا أخرى حسب الاتفاقية</li>
       </ul>
     </div>
-    <div class="pkg">
-      <div class="pkg-title">الشريك الداعم</div>
+
+    <div class="pkg-new" style="border:1px solid rgba(255,255,255,0.08);">
+      <div class="pkg-new-title">الراعي الداعم</div>
       <ul>
         <li>إدراج الاسم والشعار</li>
         <li>المبادرات المتفق عليها</li>
         <li>شهادة شراكة وتقدير</li>
+        <li>مزايا أخرى حسب الاتفاقية</li>
       </ul>
     </div>
+
   </div>
 </section>
 
